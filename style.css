@@ -1,45 +1,45 @@
 body {
-    text-align: center;
     background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     color: white;
     font-family: Arial, sans-serif;
 }
 
-.login-container, .game-container {
-    margin-top: 100px;
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 input {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
+    background: white;
+    color: black;
 }
 
 button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
+    background: blue;
+    color: white;
     cursor: pointer;
 }
 
-#click-button {
-    font-size: 24px;
-    background: white;
-    color: black;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+.google-btn {
+    background: red;
 }
 
-.plus-one {
-    position: absolute;
-    font-size: 20px;
-    color: red;
-    animation: flyUp 1s ease-out;
-}
-
-@keyframes flyUp {
-    from { transform: translateY(0); opacity: 1; }
-    to { transform: translateY(-50px); opacity: 0; }
+.guest-btn {
+    background: gray;
 }

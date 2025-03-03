@@ -1,14 +1,23 @@
-function createUsername() {
-    let username = document.getElementById("username").value.trim();
-    
-    if (username === "") {
-        username = "user" + Math.floor(100000 + Math.random() * 900000);
+function login() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (email && password) {
+        localStorage.setItem("player", email);
+        window.location.href = "game.html";
+    } else {
+        alert("Please enter a valid email and password.");
     }
-    
-    localStorage.setItem("playerName", username);
+}
+
+function googleLogin() {
+    let googleUser = "GoogleUser" + Math.floor(1000 + Math.random() * 9000);
+    localStorage.setItem("player", googleUser);
     window.location.href = "game.html";
 }
 
-function loginWithGoogle() {
-    alert("تسجيل الدخول عبر Google غير مفعّل حاليًا.");
+function guestLogin() {
+    let guestUser = "user" + Math.floor(100000 + Math.random() * 900000);
+    localStorage.setItem("player", guestUser);
+    window.location.href = "game.html";
 }

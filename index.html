@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onli Click - تسجيل الدخول</title>
+    <title>Onli Click - Login</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="login-container">
-        <label for="username">ادخل اسمك</label>
-        <input type="text" id="username" placeholder="اسم المستخدم">
-        <button onclick="createUsername()">إنشاء</button>
-        <div id="google-login">
-            <button onclick="loginWithGoogle()">تسجيل الدخول عبر Google</button>
-        </div>
-    </div>
+
+<div class="login-container">
+    <h2>Sign In</h2>
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+    <p>or</p>
+    <button class="google-btn" onclick="googleLogin()">Sign in with Google</button>
+    <button class="guest-btn" onclick="guestLogin()">Play as Guest</button>
+</div>
+
 </body>
 </html>
