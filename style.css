@@ -12,91 +12,8 @@ body {
     margin: 0;
 }
 
-/* تصميم العنوان "Onli" */
-.title {
-    font-size: 80px;
-    font-weight: bold;
-    text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.5);
-}
-
-/* إدخال الاسم */
-#username {
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* رسالة الخطأ */
-#error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-/* تصميم زر Play */
-#play-btn {
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    padding: 10px 30px;
-    margin-top: 15px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s;
-    border-radius: 10px;
-}
-
-/* زر Play يكبر عند الاقتراب منه */
-#play-btn:hover {
-    transform: scale(1.2);
-    background-color: #ddd;
-}
-
-/* زر فكرة اللعبة */
-#game-info {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    font-size: 16px;
-    padding: 8px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-/* نص فكرة اللعبة */
-#game-info-text {
-    font-size: 18px;
-    margin-top: 10px;
-    color: yellow;
-}
-
-.hidden {
-    display: none;
-}
-
-/* زر ديسكورد */
-#discord {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-#discord a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-#discord a:hover {
-    text-decoration: underline;
-}
-
-/* زر ☰ لفتح قائمة Wins على الهاتف */
+/* زر ☰ لفتح قائمة الفائزين */
 #menu-btn {
-    display: none;
     position: fixed;
     top: 15px;
     left: 15px;
@@ -133,9 +50,62 @@ body {
     display: block;
 }
 
-/* إظهار زر ☰ فقط على الهاتف */
-@media (max-width: 768px) {
-    #menu-btn {
-        display: block;
-    }
+/* تصميم الزر الدائري */
+#click-ball {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s;
+    user-select: none;
+}
+
+/* تأثير عند الضغط على الزر */
+#click-ball:active {
+    transform: scale(0.9);
+}
+
+/* عدد الكلكات */
+#click-count {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+/* تأثير +1 عند النقر */
+.plus-one {
+    position: absolute;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    animation: rise 1s ease-out forwards;
+}
+
+/* حركة +1 */
+@keyframes rise {
+    0% { opacity: 1; transform: translateY(0px); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+/* زر ديسكورد */
+#discord {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#discord a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#discord a:hover {
+    text-decoration: underline;
 }
