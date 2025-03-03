@@ -1,0 +1,141 @@
+/* إعدادات الصفحة العامة */
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* تصميم العنوان "Onli" */
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* إدخال الاسم */
+#username {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* رسالة الخطأ */
+#error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* تصميم زر Play */
+#play-btn {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+    border-radius: 10px;
+}
+
+/* زر Play يكبر عند الاقتراب منه */
+#play-btn:hover {
+    transform: scale(1.2);
+    background-color: #ddd;
+}
+
+/* زر فكرة اللعبة */
+#game-info {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 16px;
+    padding: 8px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* نص فكرة اللعبة */
+#game-info-text {
+    font-size: 18px;
+    margin-top: 10px;
+    color: yellow;
+}
+
+.hidden {
+    display: none;
+}
+
+/* زر ديسكورد */
+#discord {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#discord a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#discord a:hover {
+    text-decoration: underline;
+}
+
+/* زر ☰ لفتح قائمة Wins على الهاتف */
+#menu-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* تصميم قائمة Wins */
+#wins-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+}
+
+#wins-list h2 {
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+/* إظهار القائمة عند الضغط على زر ☰ */
+#wins-list.active {
+    display: block;
+}
+
+/* إظهار زر ☰ فقط على الهاتف */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block;
+    }
+}
