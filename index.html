@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onli Click - Login</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Onli Click</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="login-container" id="loginContainer">
+        <h2>Sign In</h2>
+        <input type="email" id="email" placeholder="Enter your email">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+        <p>OR</p>
+        <button class="google-login" onclick="googleLogin()">Login with Google</button>
+    </div>
 
-<div class="login-container">
-    <h2>Sign In</h2>
-    <input type="email" id="email" placeholder="Enter Email">
-    <input type="password" id="password" placeholder="Enter Password">
-    <button onclick="login()">Login</button>
-    <p>or</p>
-    <button class="google-btn" onclick="googleLogin()">Sign in with Google</button>
-    <button class="guest-btn" onclick="guestLogin()">Play as Guest</button>
-</div>
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <h1 class="game-title">Onli</h1>
+        <button class="play-btn" onclick="startGame()">Play</button>
+        <button class="info-btn" onclick="showInfo()">Game Info</button>
+        <div id="clicker" class="clicker" onclick="incrementClicks()">🖱</div>
+        <div id="clickCount" class="click-count">0</div>
+        <div id="wins" class="wins-list">Top Wins</div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

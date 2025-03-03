@@ -1,45 +1,65 @@
 body {
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: black;
     color: white;
+    text-align: center;
     font-family: Arial, sans-serif;
 }
 
 .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 300px;
 }
 
-input, button {
-    display: block;
+input {
     width: 100%;
-    margin: 10px 0;
     padding: 10px;
+    margin: 10px 0;
     border: none;
     border-radius: 5px;
 }
 
-input {
-    background: white;
-    color: black;
-}
-
 button {
-    background: blue;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
     color: white;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.google-btn {
-    background: red;
+.play-btn {
+    font-size: 24px;
+    margin: 20px;
+    padding: 15px;
 }
 
-.guest-btn {
-    background: gray;
+.clicker {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin: auto;
+}
+
+.clicker:hover {
+    transform: scale(1.2);
+}
+
+.click-count {
+    font-size: 30px;
+    margin-top: 20px;
 }
