@@ -3,23 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onli Click - Login</title>
+    <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link href='https://i.postimg.cc/Z5PTYM2N/R.png'>
 </head>
 <body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav-logo">Helping others</a>
+            </div>
 
-<div class="login-container">
-    <h2>Sign In</h2>
-    <input type="email" id="email" placeholder="Enter Email">
-    <input type="password" id="password" placeholder="Enter Password">
-    <button onclick="login()">Login</button>
-    
-    <p>or</p>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
 
-    <button class="google-btn" onclick="googleLogin()">Sign in with Google</button>
-    <button class="guest-btn" onclick="guestLogin()">Play as Guest</button>
-</div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
 
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home bd-grid" id="home">
+            <div class="home-data">
+                <h1 class="home-title">Hi, <br>We are <span class="home-title-color">Helping others</span><br> On Web Designer</h1>
+                <a href="#" class="button">Contact</a>
+                <a href="https://discord.gg/drMEZng8" class="button" target="_blank">Server Discord</a>
+            </div>
+
+            <div class="home-social">
+                <a href="#" class="home-social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#" class="home-social-icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="home-social-icon"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <div class="home-img">
+                <img src="https://i.postimg.cc/rsDbdDpb/4a950fdd20d95c1e1577ce7e59f64be0.jpghttps://i.postimg.cc/rsDbdDpb/4a950fdd20d95c1e1577ce7e59f64be0.jpg" alt="image">
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about-container bd-grid">
+                <div class="about-img">
+                    <img src="https://i.postimg.cc/rsDbdDpb/4a950fdd20d95c1e1577ce7e59f64be0.jpg" alt="image">
+                </div>
+
+                <div>
+                    <h2 class="about-subtitle">Helping others</h2>
+                    <p class="about-text">بصفتي مصمم ويب شغوفا ، فأنا أزدهر في إنشاء مواقع ويب جذابة بصريا وسهلة الاستخدام. بدأت رحلتي في تصميم الويب بسحر كيف يمكن للتصميم أن يعزز تجربة المستخدم او اي شخص يريد تعيلم</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-container bd-grid">
+                <div>
+                    <h2 class="skills-subtitle">Professional Skills</h2>
+                    <p class="skills-text">أحب التفكير خارج الصندوق وإضفاء الحيوية على الأفكار الفريدة من خلال التصميم ، ولدي إجادة في HTML و CSS و JavaScript ، مما يضمن أن تصميماتي ليست جميلة فحسب ، بل عملية أيضا. أعطي الأولوية لاحتياجات وتفضيلات المستخدمين ، وأجري بحثا لفهم سلوكياتهم وتفضيلاتهم.</p>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-html5 skills-icon' ></i>
+                            <span class="skills-name">HTML5</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">95%</span>
+                        </div>
+
+                        <div class="skills-bar skills-html"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-css3 skills-icon' ></i>
+                            <span class="skills-name">CSS3</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">85%</span>
+                        </div>
+
+                        <div class="skills-bar skills-css"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-javascript skills-icon' ></i>
+                            <span class="skills-name">JAVASCRIPT</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">65%</span>
+                        </div>
+
+                        <div class="skills-bar skills-js"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxs-paint skills-icon' ></i>
+                            <span class="skills-name">UX/UI</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">85%</span>
+                        </div>
+
+                        <div class="skills-bar skills-ux"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://i.postimg.cc/52LWbPyt/work3.jpg" alt="image" class="skills-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="work section" id="work">
+            <h2 class="section-title">Work</h2>
+
+            <div class="work-container bd-grid">
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/NM0n9bsm/work1.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/tJZmDTVg/work2.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/52LWbPyt/work3.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/fW1wsSCB/work4.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/m2MTgZ6R/work5.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/Qd3h9LR7/work6.jpg" alt="image">
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-container bd-grid">
+                <form action="" class="contact-form">
+                    <input type="text" placeholder="Name" class="contact-input">
+                    <input type="email" placeholder="Email" class="contact-input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
+
+                    <input type="button" value="Send" class="contact-button button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-title">Helping others</p>
+
+        <div class="footer-social">
+            <a href="#" class="footer-icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-instagram' ></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-twitter' ></i></a>
+        </div>
+
+        <p>&#169; © 2025حقوق الطبع والنشر محفوظة جميع الحقوق</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
 </body>
 </html>
