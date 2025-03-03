@@ -3,28 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onli Game</title>
+    <title>Onli Clicker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- زر ☰ لفتح قائمة الفائزين -->
-    <button id="menu-btn">☰</button>
-
-    <!-- قائمة الفائزين (Wins) -->
-    <div id="wins-list">
-        <h2>Wins</h2>
-        <ul id="leaderboard"></ul>
-    </div>
-
-    <!-- منطقة النقر -->
-    <div class="game-container">
-        <div id="click-ball">Onli Click</div>
+    <div id="game-container">
+        <h1 id="onli-title">Onli</h1>
+        <button id="play-btn">Play</button>
+        <button id="game-info-btn">Game Idea</button>
+        <div id="click-circle">Onli Click</div>
         <div id="click-count">🖱 0</div>
+        <div id="wins-list">Wins</div>
+        <button id="discord-btn">Discord Server</button>
     </div>
-
-    <!-- زر ديسكورد -->
-    <p id="discord"><a href="https://discord.gg/drMEZng8" target="_blank">Discord Server</a></p>
 
     <script src="game.js"></script>
 </body>

@@ -1,111 +1,42 @@
-/* إعدادات الصفحة العامة */
 body {
-    background-color: #111;
+    text-align: center;
+    background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    text-align: center;
+}
+
+#login-container, #game-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin-top: 50px;
 }
 
-/* زر ☰ لفتح قائمة الفائزين */
-#menu-btn {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 24px;
-    background: none;
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
     border: none;
-    color: white;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-/* تصميم قائمة Wins */
-#wins-list {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    color: white;
-    overflow-y: auto;
-}
-
-#wins-list h2 {
-    text-align: center;
-    font-size: 24px;
-    border-bottom: 2px solid white;
-    padding-bottom: 10px;
-}
-
-/* إظهار القائمة عند الضغط على زر ☰ */
-#wins-list.active {
-    display: block;
-}
-
-/* تصميم الزر الدائري */
-#click-ball {
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
+#click-circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, white, transparent);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.1s;
-    user-select: none;
-}
-
-/* تأثير عند الضغط على الزر */
-#click-ball:active {
-    transform: scale(0.9);
-}
-
-/* عدد الكلكات */
-#click-count {
-    margin-top: 10px;
-    font-size: 24px;
-}
-
-/* تأثير +1 عند النقر */
-.plus-one {
-    position: absolute;
-    color: yellow;
+    margin-top: 20px;
     font-size: 20px;
-    font-weight: bold;
-    animation: rise 1s ease-out forwards;
-}
-
-/* حركة +1 */
-@keyframes rise {
-    0% { opacity: 1; transform: translateY(0px); }
-    100% { opacity: 0; transform: translateY(-50px); }
-}
-
-/* زر ديسكورد */
-#discord {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-#discord a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-#discord a:hover {
-    text-decoration: underline;
+    cursor: pointer;
 }
