@@ -1,9 +1,14 @@
-document.getElementById("start-btn").addEventListener("click", function() {
-    let username = document.getElementById("username").value;
-    if (!username) {
-        username = "user" + Math.floor(Math.random() * 1000000);
+function createUsername() {
+    let username = document.getElementById("username").value.trim();
+    
+    if (username === "") {
+        username = "user" + Math.floor(100000 + Math.random() * 900000);
     }
-
-    localStorage.setItem("username", username);
+    
+    localStorage.setItem("playerName", username);
     window.location.href = "game.html";
-});
+}
+
+function loginWithGoogle() {
+    alert("تسجيل الدخول عبر Google غير مفعّل حاليًا.");
+}

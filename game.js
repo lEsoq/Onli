@@ -1,17 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let username = localStorage.getItem("username");
-    if (!username) {
-        window.location.href = "index.html";
-    }
+let clicks = 0;
 
-    let clickCount = 0;
-
-    document.getElementById("click-circle").addEventListener("click", function() {
-        clickCount++;
-        document.getElementById("click-count").textContent = "🖱 " + clickCount;
-    });
-
-    document.getElementById("discord-btn").addEventListener("click", function() {
-        window.location.href = "https://discord.gg/drMEZng8";
-    });
+document.getElementById("click-button").addEventListener("click", () => {
+    clicks++;
+    document.getElementById("click-count").textContent = `🖱 ${clicks}`;
+    
+    let plusOne = document.createElement("span");
+    plusOne.textContent = "+1";
+    plusOne.classList.add("plus-one");
+    
+    document.body.appendChild(plusOne);
+    
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    plusOne.style.left = `${x}px`;
+    plusOne.style.top = `${y}px`;
+    
+    setTimeout(() => {
+        plusOne.remove();
+    }, 1000);
 });
