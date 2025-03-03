@@ -1,22 +1,23 @@
-let clicks = 0;
-
 function login() {
-    document.getElementById("loginContainer").style.display = "none";
-    document.getElementById("gameContainer").style.display = "block";
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (email && password) {
+        localStorage.setItem("player", email);
+        window.location.href = "game.html";
+    } else {
+        alert("Please enter a valid email and password.");
+    }
 }
 
 function googleLogin() {
-    alert("Google Login Feature Coming Soon!");
+    let googleUser = "GoogleUser" + Math.floor(1000 + Math.random() * 9000);
+    localStorage.setItem("player", googleUser);
+    window.location.href = "game.html";
 }
 
-function startGame() {
-    document.querySelector(".play-btn").style.display = "none";
-    document.querySelector(".info-btn").style.display = "none";
-    document.getElementById("clicker").style.display = "block";
-    document.getElementById("clickCount").style.display = "block";
-}
-
-function incrementClicks() {
-    clicks++;
-    document.getElementById("clickCount").innerText = clicks;
+function guestLogin() {
+    let guestUser = "user" + Math.floor(100000 + Math.random() * 900000);
+    localStorage.setItem("player", guestUser);
+    window.location.href = "game.html";
 }
